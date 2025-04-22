@@ -1,18 +1,11 @@
-import { useEffect } from "react";
-
-function Checkbox({checked, setChecked, todolist, añadidor, i}){
-    useEffect(() => {
-        todolist[i].chequeado = checked;
-        todolist[i].timestampChequeado = checked ? new Date() : null;
-        añadidor(todolist);
-    });
-
+function Checkbox({ischecked, setChecked}){
     return (
         <input
             type="checkbox"
-            id={"check" + Math.random()}
-            className="form-check-input" onChange={() => setChecked(!checked)}
-            checked={checked}
+            id={Math.random()}
+            className="form-check-input"
+            onChange={() => setChecked(!ischecked)}
+            checked={ischecked}
         />
     );
 }

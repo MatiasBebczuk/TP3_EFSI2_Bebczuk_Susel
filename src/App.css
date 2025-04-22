@@ -43,6 +43,7 @@
 
 .listaItem{
   display: flex;
+  flex-direction: row;
 }
 
 .tachado{
